@@ -9,6 +9,6 @@ from crud.models import Familiares
 def inicio(request):
 
     familiares = Familiares.objects.all()
-    nombre_completo = {'mi_nombre':'Ariel','mi_apellido':'Botti'}
     
-    return render(request,"index.html", familiares)
+    
+    return render(request,"index.html", {'familia':familiares})

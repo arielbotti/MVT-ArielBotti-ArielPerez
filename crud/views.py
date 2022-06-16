@@ -12,14 +12,21 @@ def inicio(request):
 
 def alta(request):
     
-    nom = request.get['nombre']
-    ape = request.get['apellido']
-    nac = request.get['nacimiento']
-    docu = request.get['dni']
+    nom = request.GET['nombre']
+    ape = request.GET['apellido']
+    nac = request.GET['nacimiento']
+    docu = request.GET['dni']
+    
+    nuevo = familiar(nombre=nom, apellido= ape, fecha_nacimiento=nac, dni=docu)
+    nuevo.save()
 
-    fam = familiar.objects.create(nombre=nom, apellido=ape, fecha_nacimiento=nac,
-            dni=docu)
+    #return HttpResponse(inicio)
+    familiares = familiar.objects.all()
+    return render(request,"index.html", {'familiar':familiares})
 
-    return HttpResponse(response)
- 
+def borrar(request):
 
+
+
+    familiares = familiar.objects.all()
+    return render(request,"index.html", {'familiar':familiares})

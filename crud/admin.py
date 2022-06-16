@@ -2,4 +2,4 @@ from django.contrib import admin
 
 from crud.models import *
 
-admin.site.register(Familiares)
+admin.site.register(familiar)

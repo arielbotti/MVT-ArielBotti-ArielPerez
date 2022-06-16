@@ -36,22 +36,22 @@
       
       <div class="row">
         <div class="col">
-          <form>
+          <form action="/alta/" method="get">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre">
+              <input type="text" class="form-control" id="nombre" name="nombre" required >
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="apellido">
+              <input type="text" class="form-control" id="apellido" name="apellido" required>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Fecha Nacimiento</label>
-              <input type="date" class="form-control" id="nacimiento">
+              <input type="date" class="form-control" id="nacimiento" name="nacimiento" required>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">DNI</label>
-              <input type="text" class="form-control" id="dni">
+              <input type="text" class="form-control" id="dni" name="dni" required>
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>

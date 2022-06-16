@@ -21,4 +21,5 @@ from crud.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', inicio),
+    path('alta/', alta),
 ]

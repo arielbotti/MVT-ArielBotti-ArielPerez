@@ -26,7 +26,9 @@ def alta(request):
 
 def borrar(request):
 
+    borrar = request.GET['borrar']
 
-
+    familiar.objects.all().delete()
     familiares = familiar.objects.all()
+
     return render(request,"index.html", {'familiar':familiares})
